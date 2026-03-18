@@ -527,8 +527,11 @@
     .people-grid { grid-template-columns: 1fr 1fr; }
     .caretakers-grid { grid-template-columns: repeat(2, 1fr); }
     .contact-grid { grid-template-columns: 1fr; }
-    .vision-mission-layout { grid-template-columns: 1fr !important; }
-    .values-layout { grid-template-columns: 1fr !important; }
+    .vision-mission-grid { grid-template-columns: 1fr !important; }
+    .values-image-grid { grid-template-columns: 1fr !important; }
+    .vision-mission-grid > div:last-child { height: 280px; min-height: 0 !important; }
+    .values-image-grid > div:first-child { height: 280px; }
+    .adopt-portrait img { object-position: center 50% !important; }
   }
 
   @media (max-width: 640px) {
@@ -538,15 +541,18 @@
     section { padding: 3.5rem 1.25rem; }
     .hero { min-height: 80vh; }
     .hero-content { padding: 3rem 1.25rem; }
-    .hero-buttons { flex-direction: column; }
-    .btn-primary, .btn-secondary { text-align: center; }
+    .hero-buttons { flex-direction: column; align-items: stretch; }
+    .hero-buttons a { text-align: center; }
+    .btn-primary, .btn-secondary { text-align: center; display: block; }
     .values-grid { grid-template-columns: 1fr; }
     .believe-grid { grid-template-columns: 1fr; }
     .believe-grid .believe-card:nth-child(4),
     .believe-grid .believe-card:nth-child(5) { grid-column: 1; }
     .people-grid { grid-template-columns: 1fr 1fr; }
     .caretakers-grid { grid-template-columns: repeat(2, 1fr); }
-    .adopt-portrait { display: none; }
+    .adopt-portrait { width: 100% !important; }
+    .adopt-portrait img { height: 260px !important; }
+    .adopt-section .section-inner > div { grid-template-columns: 1fr !important; }
   }
 
   @media (max-width: 400px) {
@@ -607,7 +613,7 @@
     <div class="section-tag">Who We Are</div>
     <h2>Our Vision &amp; Mission</h2>
     <p class="lead">Driven by compassion, guided by integrity — everything we do is in service of the animals in our care.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:stretch;">
+    <div class="vision-mission-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:stretch;">
       <div style="display:flex;flex-direction:column;gap:2rem;">
         <div class="mission-card vision">
           <h3>Our Vision</h3>
@@ -630,7 +636,7 @@
     <div class="section-tag" style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9);">What We Stand For</div>
     <h2>Our Values</h2>
     <p class="lead">Four principles that guide every decision we make and every animal we care for.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch;margin-top:2.5rem;">
+    <div class="values-image-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch;margin-top:2.5rem;">
       <div style="border-radius:16px;overflow:hidden;min-height:0;">
         <img src="our_values.jpeg" alt="CAPS dog" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;">
       </div>
@@ -734,7 +740,8 @@
         </a>
       </div>
       <div class="adopt-portrait" style="width:220px;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
-        <img src="forever_home.png" alt="A dog in their forever home" style="width:100%;height:360px;object-fit:cover;display:block;">
+        <img src="forever_home.png" alt="A dog in their forever home" style="width:100%;height:360px;object-fit:cover;object-position:center 50%;display:block;">
+      </div>
       </div>
     </div>
   </div>
@@ -844,7 +851,7 @@
       <div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-          <div><h4>Visit Us</h4><p>20 Kerr Point Road<br>Weipa, QLD 4874</p></div>
+          <div><h4>Visit Us</h4><p>20 Kerr Point Drive<br>Weipa, QLD 4874</p></div>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
@@ -877,7 +884,7 @@
 
 <footer>
   <p><strong style="color:rgba(255,255,255,0.7)">Cape Animal Protection Shelter Inc. (CAPS)</strong></p>
-  <p>ABN 69 052 210 256 &bull; 20 Kerr Point Road, Weipa QLD 4874</p>
+  <p>ABN 69 052 210 256 &bull; 20 Kerr Point Drive, Weipa QLD 4874</p>
   <p style="margin-top:0.5rem;">&copy; 2025 CAPS &bull; <a href="https://www.facebook.com/CAPS.for.dogs/" target="_blank">Facebook</a> &bull; <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">SaviourLife</a></p>
 </footer>
 
