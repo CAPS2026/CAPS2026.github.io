@@ -1,1 +1,389 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team – Cape Animal Protection Shelter Inc. (CAPS)</title>
+<meta name="description" content="Meet the volunteer board and dedicated caretakers of Cape Animal Protection Shelter Inc. (CAPS) in Weipa, Cape York, QLD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --caps-blue: #1a7abf;
+    --caps-blue-dark: #0f5a8f;
+    --caps-blue-light: #e6f3fb;
+    --caps-orange: #f4a324;
+    --caps-orange-light: #fef3dc;
+    --caps-white: #ffffff;
+    --caps-cream: #fdfaf5;
+    --caps-charcoal: #2c2c2a;
+    --caps-gray: #6b6b68;
+    --caps-gray-light: #f4f2ed;
+    --caps-border: #e0ddd6;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --nav-height: 100px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--caps-charcoal);
+    background: var(--caps-white);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--caps-white);
+    border-bottom: 1px solid var(--caps-border);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 80px; width: auto; }
+
+  .nav-brand {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--caps-blue);
+    line-height: 1.2;
+  }
+
+  .nav-brand span { display: block; font-size: 0.95rem; font-weight: 600; color: var(--caps-gray); }
+
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+
+  .nav-links a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--caps-charcoal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--caps-blue); }
+  .nav-links a.active { color: var(--caps-blue); }
+
+  .nav-cta {
+    background: var(--caps-orange) !important;
+    color: var(--caps-white) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+  }
+
+  .nav-cta:hover { background: #d4891a !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--caps-charcoal);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: var(--caps-white);
+    border-bottom: 1px solid var(--caps-border);
+    padding: 1.5rem 2rem;
+    z-index: 999;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--caps-charcoal);
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--caps-border);
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--caps-blue); }
+
+  section { padding: 5rem 2rem; scroll-margin-top: var(--nav-height); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--caps-blue-light);
+    color: var(--caps-blue);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .section-tag.orange { background: var(--caps-orange-light); color: #b87a1a; }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--caps-charcoal);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .lead { font-size: 1.05rem; color: var(--caps-gray); max-width: 680px; margin-bottom: 3rem; }
+
+  .people-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+
+  .person-card {
+    background: var(--caps-cream);
+    border: 1px solid var(--caps-border);
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+  }
+
+  .person-photo {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--caps-blue-light);
+    border: 3px solid var(--caps-blue);
+    margin: 0 auto 1rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .person-photo svg { width: 44px; height: 44px; fill: var(--caps-blue); opacity: 0.5; }
+
+  .person-card h4 { font-family: var(--font-heading); font-weight: 800; font-size: 1rem; color: var(--caps-charcoal); margin-bottom: 0.25rem; }
+
+  .person-card .role {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--caps-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .person-card.more {
+    border-style: dashed;
+    background: transparent;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+
+  .person-card.more .role { color: var(--caps-gray); font-size: 0.9rem; text-transform: none; letter-spacing: 0; }
+
+  .caretakers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+
+  .caretaker-card {
+    background: var(--caps-white);
+    border: 1px solid var(--caps-border);
+    border-radius: 14px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .caretaker-photo {
+    width: 68px; height: 68px;
+    border-radius: 50%;
+    background: var(--caps-orange-light);
+    border: 3px solid var(--caps-orange);
+    margin: 0 auto 0.85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .caretaker-photo svg { width: 38px; height: 38px; fill: var(--caps-orange); opacity: 0.5; }
+  .caretaker-card h4 { font-family: var(--font-heading); font-weight: 800; font-size: 1rem; color: var(--caps-charcoal); margin-bottom: 0.2rem; }
+  .caretaker-card .role { font-family: var(--font-heading); font-size: 0.8rem; color: var(--caps-gray); }
+
+  footer { background: #1c1c1a; padding: 2rem; text-align: center; }
+  footer p { font-family: var(--font-heading); font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-bottom: 0.35rem; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: var(--caps-orange); }
+
+  @media (max-width: 900px) {
+    .people-grid { grid-template-columns: 1fr 1fr; }
+    .caretakers-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 3.5rem 1.25rem; }
+    .people-grid { grid-template-columns: 1fr 1fr; }
+    .caretakers-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 400px) {
+    .people-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="CAPS_logo.jpg" alt="CAPS Logo">
+      <div class="nav-brand">C.A.P.S <span>Cape Animal Protection Shelter Inc.</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="mission.html">Mission &amp; Vision</a></li>
+      <li><a href="our-team.html" class="active">Our Team</a></li>
+      <li><a href="index.html#donate">Donate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Adopt a Dog</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="mission.html" onclick="closeMenu()">Mission &amp; Vision</a>
+  <a href="our-team.html" onclick="closeMenu()">Our Team</a>
+  <a href="index.html#donate" onclick="closeMenu()">Donate</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">Adopt a Dog ↗</a>
+</div>
+
+<!-- BOARD -->
+<section id="team">
+  <div class="section-inner">
+    <div class="section-tag">Our People</div>
+    <h2>Meet the Board</h2>
+    <p class="lead">CAPS is governed by a dedicated volunteer Board committed to transparency, accountability, and the welfare of every animal in our care.</p>
+    <div class="people-grid">
+      <div class="person-card">
+        <div class="person-photo" style="background:none;border-color:var(--caps-blue);">
+          <img src="shayna_reeves.jpeg" alt="Shayna Reeves" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+        <div class="role">President</div><h4>Shayna Reeves</h4>
+      </div>
+      <div class="person-card">
+        <div class="person-photo" style="background:none;border-color:var(--caps-blue);">
+          <img src="julie_green.png" alt="Julie Green" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+        <div class="role">Vice President</div><h4>Julie Green</h4>
+      </div>
+      <div class="person-card">
+        <div class="person-photo" style="background:none;border-color:var(--caps-blue);">
+          <img src="nicole_pritchard.png" alt="Nicole Pritchard" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+        <div class="role">Treasurer</div><h4>Nicole Pritchard</h4>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+        <div class="role">Secretary</div><h4>Chelsea Bratt</h4>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+        <div class="role">Payroll</div><h4>Sonya Fletcher</h4>
+      </div>
+      <div class="person-card">
+        <div class="person-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+        <div class="role">Foster &amp; Adoptions Coordinator</div><h4>Name to follow</h4>
+      </div>
+      <div class="person-card more">
+        <div class="person-photo" style="border-style:dashed;border-color:var(--caps-border);background:transparent;">
+          <svg viewBox="0 0 24 24" style="fill:var(--caps-gray);opacity:0.35;"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        </div>
+        <div class="role">More board members to follow</div>
+      </div>
+    </div>
+
+    <!-- CARETAKERS -->
+    <div style="margin-top:4rem;">
+      <div class="section-tag orange">The Hands-On Team</div>
+      <h2>Our Dedicated Caretakers</h2>
+      <p class="lead">The people who show up every single day to make sure every animal is fed, loved, and cared for — rain, heatwave, or anything in between.</p>
+      <div class="caretakers-grid">
+        <div class="caretaker-card">
+          <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+          <h4>Wayne</h4><div class="role">Caretaker</div>
+        </div>
+        <div class="caretaker-card">
+          <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+          <h4>Elias</h4><div class="role">Caretaker</div>
+        </div>
+        <div class="caretaker-card">
+          <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+          <h4>Ashleigh</h4><div class="role">Caretaker</div>
+        </div>
+        <div class="caretaker-card">
+          <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
+          <h4>Taylor</h4><div class="role">Caretaker</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:rgba(255,255,255,0.7)">Cape Animal Protection Shelter Inc. (CAPS)</strong></p>
+  <p>ABN 69 052 210 256 &bull; 20 Kerr Point Drive, Weipa QLD 4874</p>
+  <p style="color:rgba(255,255,255,0.3);font-size:0.8rem;margin-top:0.25rem;">capeanimalprotectionshelter.org.au is the website of Cape Animal Protection Shelter Inc.</p>
+  <p style="margin-top:0.5rem;">&copy; 2026 CAPS &bull; <a href="https://www.facebook.com/CAPS.for.dogs/" target="_blank">Facebook</a> &bull; <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">SavourLife</a></p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('mobileMenu');
+    var hamburger = document.querySelector('.hamburger');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
+
