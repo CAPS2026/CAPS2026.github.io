@@ -1,1 +1,504 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jail Break &amp; Fostering – Cape Animal Protection Shelter Inc. (CAPS)</title>
+<meta name="description" content="Take a CAPS dog home for a Jail Break outing or longer-term fostering in Weipa, Cape York, QLD. Find out how it works and what to expect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --caps-blue: #1a7abf;
+    --caps-blue-dark: #0f5a8f;
+    --caps-blue-light: #e6f3fb;
+    --caps-orange: #f4a324;
+    --caps-orange-light: #fef3dc;
+    --caps-white: #ffffff;
+    --caps-cream: #fdfaf5;
+    --caps-charcoal: #2c2c2a;
+    --caps-gray: #6b6b68;
+    --caps-gray-light: #f4f2ed;
+    --caps-border: #e0ddd6;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --nav-height: 100px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--caps-charcoal);
+    background: var(--caps-white);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--caps-white);
+    border-bottom: 1px solid var(--caps-border);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 80px; width: auto; }
+
+  .nav-brand {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--caps-blue);
+    line-height: 1.2;
+  }
+
+  .nav-brand span { display: block; font-size: 0.95rem; font-weight: 600; color: var(--caps-gray); }
+
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+
+  .nav-links a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--caps-charcoal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--caps-blue); }
+  .nav-links a.active { color: var(--caps-blue); }
+
+  .nav-cta {
+    background: var(--caps-orange) !important;
+    color: var(--caps-white) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+  }
+
+  .nav-cta:hover { background: #d4891a !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--caps-charcoal);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: var(--caps-white);
+    border-bottom: 1px solid var(--caps-border);
+    padding: 1.5rem 2rem;
+    z-index: 999;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--caps-charcoal);
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--caps-border);
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--caps-blue); }
+
+  section { padding: 5rem 2rem; scroll-margin-top: var(--nav-height); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--caps-blue-light);
+    color: var(--caps-blue);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .section-tag.orange { background: var(--caps-orange-light); color: #b87a1a; }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--caps-charcoal);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .lead { font-size: 1.05rem; color: var(--caps-gray); max-width: none; margin-bottom: 3rem; }
+
+  /* INTRO */
+  .intro-text { max-width: none; font-size: 1.1rem; color: var(--caps-gray); margin-bottom: 2rem; }
+
+  .intro-img-full {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16 / 7;
+    background: var(--caps-gray-light);
+  }
+
+  .intro-img-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+    display: block;
+  }
+
+  /* OPTIONS */
+  #homecare { padding-bottom: 1.5rem; }
+  .options-section { background: var(--caps-gray-light); padding-top: 2rem; }
+
+  .options-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin-top: 2.5rem;
+  }
+
+  .options-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .options-image { border-radius: 16px; overflow: hidden; min-height: 0; max-height: 480px; }
+  .options-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
+
+  .option-card {
+    background: var(--caps-cream);
+    border: 1px solid var(--caps-border);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .option-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--caps-blue);
+  }
+
+  .option-card:nth-child(2)::before { background: var(--caps-orange); }
+
+  .option-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--caps-blue-dark);
+    margin-bottom: 0.6rem;
+  }
+
+  .option-card p { font-size: 1rem; color: var(--caps-gray); line-height: 1.7; }
+
+  /* CTA */
+  .cta-section { background: var(--caps-orange-light); text-align: center; }
+  .cta-section p { color: var(--caps-gray); max-width: 560px; margin: 0 auto 2rem; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--caps-orange);
+    color: var(--caps-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: #d4891a; transform: translateY(-2px); }
+
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .cta-secondary-text {
+    margin-top: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--caps-gray);
+  }
+
+  .cta-secondary-text a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
+  .cta-secondary-text a:hover { text-decoration: underline; }
+
+  /* FAQ */
+  .faq-section { background: var(--caps-white); }
+  .faq-list { margin-top: 2.5rem; max-width: 800px; }
+
+  .faq-item {
+    border: 1px solid var(--caps-border);
+    border-radius: 14px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: var(--caps-cream);
+  }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: var(--caps-charcoal);
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::marker { content: ''; }
+
+  .faq-toggle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--caps-blue-light);
+    color: var(--caps-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .faq-toggle::before { content: '+'; }
+  .faq-item[open] .faq-toggle { background: var(--caps-orange); color: var(--caps-white); }
+  .faq-item[open] .faq-toggle::before { content: '\2212'; }
+  .faq-item[open] summary { border-bottom: 1px solid var(--caps-border); }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--caps-gray);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .faq-answer a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
+  .faq-answer a:hover { text-decoration: underline; }
+
+  footer { background: #1c1c1a; padding: 2rem; text-align: center; }
+  footer p { font-family: var(--font-heading); font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-bottom: 0.35rem; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: var(--caps-orange); }
+
+  @media (max-width: 900px) {
+    .intro-img-full { aspect-ratio: 4/3; }
+    .options-layout { grid-template-columns: 1fr; }
+    .options-image { max-height: 320px; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 3.5rem 1.25rem; }
+    .faq-item summary { font-size: 0.97rem; padding: 1.1rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="CAPS_logo.jpg" alt="CAPS Logo">
+      <div class="nav-brand">C.A.P.S <span>Cape Animal Protection Shelter Inc.</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="mission.html">Mission &amp; Vision</a></li>
+      <li><a href="our-team.html">Our Team</a></li>
+      <li><a href="index.html#donate">Donate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Adopt a Dog</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="mission.html" onclick="closeMenu()">Mission &amp; Vision</a>
+  <a href="our-team.html" onclick="closeMenu()">Our Team</a>
+  <a href="index.html#donate" onclick="closeMenu()">Donate</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">Adopt a Dog ↗</a>
+</div>
+
+<!-- INTRO -->
+<section id="homecare">
+  <div class="section-inner">
+    <div class="section-tag">Home Care</div>
+    <h2>Jail Break &amp; Fostering</h2>
+    <div class="intro-text">
+      <p>There is nothing our dogs love more than an adventure — getting out of the shelter to spend time with a family in a different environment for some peace and quiet, an exciting trip, or as a trial for possible adoption.</p>
+    </div>
+    <div class="intro-img-full">
+      <img src="PLACEHOLDER_jailbreak_foster.jpeg" alt="A CAPS dog out on a Jail Break or fostering trip" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- OPTIONS -->
+<section class="options-section">
+  <div class="section-inner">
+    <div class="section-tag orange">Two Ways to Help</div>
+    <h2>Jail Break or Fostering?</h2>
+    <p class="lead">Both options give our dogs a much-needed break from the shelter — the right one for you depends on how much time you can offer.</p>
+    <div class="options-layout">
+      <div class="options-cards">
+        <div class="option-card">
+          <h3>Jail Break</h3>
+          <p>Taking a dog home, away from the shelter, for a few hours, a weekend, or perhaps a week. They'll be with you most of the time for walks, exercise, and games.</p>
+        </div>
+        <div class="option-card">
+          <h3>Fostering</h3>
+          <p>A longer-term arrangement, ideally for several weeks, as a trial run for adoption. The dog takes its first steps to being part of a family, and might not be supervised all the time.</p>
+        </div>
+      </div>
+      <div class="options-image">
+        <img src="ready_for_jailbreak.jpeg" alt="A CAPS dog ready and waiting for a Jail Break" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="section-tag orange">Ready to Get Started?</div>
+    <h2>Register for Jail Break or Fostering</h2>
+    <p>Click the link below to fill in the relevant online form and register, or give our caretakers a call to chat through the right option for you.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">Register for Jail Break ↗</a>
+      <a href="#" class="btn-primary">Register for Fostering ↗</a>
+    </div>
+    <p class="cta-secondary-text">Prefer to chat first? <a href="contact.html">Get in touch with our caretakers</a> to find out more.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-tag">Got Questions?</div>
+    <h2>Frequently Asked Questions</h2>
+    <p class="lead">See the FAQs below to find out more. Click a question to expand the answer.</p>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>How do I get started with Jail Break or Fostering?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">The first step is to complete the Jail Break or Foster registration form above, whichever applies to you. We'll then assess your suitability based on things like transport, fences at home, and whether you have other dogs or children, which helps us match you with the right dog.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I have kids at home, does that mean I can't Jail Break or foster?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">No, it just means some dogs are better suited to living with children than others.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I have dogs at home, does that mean I can't Jail Break or foster?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">No, it just means some dogs are better suited to living with other dogs and pets than others.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I have low fences, does this mean I can't bring a dog home?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Possibly. We need to be sure a dog can't escape. This is less of a concern on a supervised Jail Break, but for fostering, secure fencing is essential.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>When can I collect and return the dogs?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Pickup and drop-off is limited to our normal opening hours, when a caretaker is on duty.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What's the difference between Fostering and adoption?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">When you adopt a dog, it's yours forever — you become the registered legal owner and are legally responsible for it. A foster dog still belongs to CAPS and can be returned at any time, at your request or at ours.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if the dog gets sick while on Foster care?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">If your foster dog becomes unwell, we'll arrange to visit or collect them and, if needed, take them to see the vet — at no cost to you.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:rgba(255,255,255,0.7)">Cape Animal Protection Shelter Inc. (CAPS)</strong></p>
+  <p>ABN 69 052 210 256 &bull; 20 Kerr Point Drive, Weipa QLD 4874</p>
+  <p style="color:rgba(255,255,255,0.3);font-size:0.8rem;margin-top:0.25rem;">capeanimalprotectionshelter.org.au is the website of Cape Animal Protection Shelter Inc.</p>
+  <p style="margin-top:0.5rem;">&copy; 2026 CAPS &bull; <a href="https://www.facebook.com/CAPS.for.dogs/" target="_blank">Facebook</a> &bull; <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">SavourLife</a></p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('mobileMenu');
+    var hamburger = document.querySelector('.hamburger');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
+
