@@ -174,21 +174,23 @@
   .lead { font-size: 1.05rem; color: var(--caps-gray); max-width: none; margin-bottom: 3rem; }
 
   /* INTRO */
-  .intro-text { max-width: none; font-size: 1.1rem; color: var(--caps-gray); margin-bottom: 2rem; }
-
-  .intro-img-full {
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    aspect-ratio: 16 / 8;
-    background: var(--caps-gray-light);
+  .intro-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2rem;
   }
 
-  .intro-img-full img {
+  .intro-text { font-size: 1.1rem; color: var(--caps-gray); }
+
+  .intro-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; background: var(--caps-gray-light); }
+
+  .intro-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 80%;
+    object-position: center 50%;
     display: block;
   }
 
@@ -207,7 +209,7 @@
   .options-cards { display: flex; flex-direction: column; gap: 1.5rem; }
 
   .options-image { border-radius: 16px; overflow: hidden; min-height: 0; max-height: 480px; }
-  .options-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 50%; display: block; }
+  .options-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 65%; display: block; }
 
   .option-card {
     background: var(--caps-cream);
@@ -334,7 +336,8 @@
   footer a:hover { color: var(--caps-orange); }
 
   @media (max-width: 900px) {
-    .intro-img-full { aspect-ratio: 4/3; }
+    .intro-layout { grid-template-columns: 1fr; }
+    .intro-image { max-height: 300px; }
     .options-layout { grid-template-columns: 1fr; }
     .options-image { max-height: 320px; }
   }
@@ -382,11 +385,13 @@
   <div class="section-inner">
     <div class="section-tag">Home Care</div>
     <h2>Jail Break &amp; Fostering</h2>
-    <div class="intro-text">
-      <p>There is nothing our dogs love more than an adventure — getting out of the shelter to spend time with a family in a different environment for some peace and quiet, an exciting trip, or as a trial for possible adoption.</p>
-    </div>
-    <div class="intro-img-full">
-      <img src="ready_for_foster.png" alt="A CAPS dog out on a Jail Break or fostering trip" loading="lazy">
+    <div class="intro-layout">
+      <div class="intro-text">
+        <p>There is nothing our dogs love more than an adventure — getting out of the shelter to spend time with a family in a different environment for some peace and quiet, an exciting trip, or as a trial for possible adoption.</p>
+      </div>
+      <div class="intro-image">
+        <img src="ready_for_foster.jpeg" alt="A CAPS dog out on a Jail Break or fostering trip" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -409,7 +414,7 @@
         </div>
       </div>
       <div class="options-image">
-        <img src="ready_for_jail_break.jpg" alt="A CAPS dog ready and waiting for a Jail Break" loading="lazy">
+        <img src="ready_for_jail_break.jpeg" alt="A CAPS dog ready and waiting for a Jail Break" loading="lazy">
       </div>
     </div>
   </div>
