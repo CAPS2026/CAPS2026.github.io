@@ -1,1 +1,432 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adoption – Cape Animal Protection Shelter Inc. (CAPS)</title>
+<meta name="description" content="Adopt a dog from Cape Animal Protection Shelter Inc. (CAPS) in Weipa, Cape York, QLD. Find out what's involved and how to get started.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --caps-blue: #1a7abf;
+    --caps-blue-dark: #0f5a8f;
+    --caps-blue-light: #e6f3fb;
+    --caps-orange: #f4a324;
+    --caps-orange-light: #fef3dc;
+    --caps-white: #ffffff;
+    --caps-cream: #fdfaf5;
+    --caps-charcoal: #2c2c2a;
+    --caps-gray: #6b6b68;
+    --caps-gray-light: #f4f2ed;
+    --caps-border: #e0ddd6;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --nav-height: 100px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--caps-charcoal);
+    background: var(--caps-white);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--caps-white);
+    border-bottom: 1px solid var(--caps-border);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { height: 80px; width: auto; }
+
+  .nav-brand {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--caps-blue);
+    line-height: 1.2;
+  }
+
+  .nav-brand span { display: block; font-size: 0.95rem; font-weight: 600; color: var(--caps-gray); }
+
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+
+  .nav-links a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--caps-charcoal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--caps-blue); }
+  .nav-links a.active { color: var(--caps-blue); }
+
+  .nav-cta {
+    background: var(--caps-orange) !important;
+    color: var(--caps-white) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+  }
+
+  .nav-cta:hover { background: #d4891a !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--caps-charcoal);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: var(--caps-white);
+    border-bottom: 1px solid var(--caps-border);
+    padding: 1.5rem 2rem;
+    z-index: 999;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--caps-charcoal);
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--caps-border);
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--caps-blue); }
+
+  section { padding: 5rem 2rem; scroll-margin-top: var(--nav-height); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--caps-blue-light);
+    color: var(--caps-blue);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .section-tag.orange { background: var(--caps-orange-light); color: #b87a1a; }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--caps-charcoal);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .lead { font-size: 1.05rem; color: var(--caps-gray); max-width: none; margin-bottom: 3rem; }
+
+  /* INTRO */
+  .intro-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2rem;
+  }
+
+  .intro-text { font-size: 1.1rem; color: var(--caps-gray); }
+  .intro-text p { margin-bottom: 1.25rem; }
+  .intro-text p:last-child { margin-bottom: 0; }
+  .intro-text a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
+  .intro-text a:hover { text-decoration: underline; }
+
+  .intro-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; background: var(--caps-gray-light); }
+
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+    display: block;
+  }
+
+  /* CTA */
+  .cta-section { background: var(--caps-orange-light); text-align: center; }
+  .cta-section p { color: var(--caps-gray); max-width: 560px; margin: 0 auto 2rem; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--caps-orange);
+    color: var(--caps-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover { background: #d4891a; transform: translateY(-2px); }
+
+  .cta-secondary-text {
+    margin-top: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--caps-gray);
+  }
+
+  .cta-secondary-text a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
+  .cta-secondary-text a:hover { text-decoration: underline; }
+
+  /* FAQ */
+  .faq-section { background: var(--caps-white); }
+  .faq-list { margin-top: 2.5rem; max-width: 800px; }
+
+  .faq-item {
+    border: 1px solid var(--caps-border);
+    border-radius: 14px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: var(--caps-cream);
+  }
+
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: var(--caps-charcoal);
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::marker { content: ''; }
+
+  .faq-toggle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--caps-blue-light);
+    color: var(--caps-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .faq-toggle::before { content: '+'; }
+  .faq-item[open] .faq-toggle { background: var(--caps-orange); color: var(--caps-white); }
+  .faq-item[open] .faq-toggle::before { content: '\2212'; }
+  .faq-item[open] summary { border-bottom: 1px solid var(--caps-border); }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--caps-gray);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .faq-answer a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
+  .faq-answer a:hover { text-decoration: underline; }
+
+  footer { background: #1c1c1a; padding: 2rem; text-align: center; }
+  footer p { font-family: var(--font-heading); font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-bottom: 0.35rem; }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  footer a:hover { color: var(--caps-orange); }
+
+  @media (max-width: 900px) {
+    .intro-layout { grid-template-columns: 1fr; }
+    .intro-image { max-height: 300px; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 3.5rem 1.25rem; }
+    .faq-item summary { font-size: 0.97rem; padding: 1.1rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="CAPS_logo.jpg" alt="CAPS Logo">
+      <div class="nav-brand">C.A.P.S <span>Cape Animal Protection Shelter Inc.</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="mission.html">Mission &amp; Vision</a></li>
+      <li><a href="our-team.html">Our Team</a></li>
+      <li><a href="index.html#donate">Donate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Adopt a Dog</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="mission.html" onclick="closeMenu()">Mission &amp; Vision</a>
+  <a href="our-team.html" onclick="closeMenu()">Our Team</a>
+  <a href="index.html#donate" onclick="closeMenu()">Donate</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+  <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">Adopt a Dog ↗</a>
+</div>
+
+<!-- INTRO -->
+<section id="adoption">
+  <div class="section-inner">
+    <div class="section-tag">Forever Homes</div>
+    <h2>Adoption</h2>
+    <div class="intro-layout">
+      <div class="intro-text">
+        <p>Adoption of our dogs is what we are aiming for. We miss them very much, but are thrilled to see them heading to their forever home and new family. When you adopt a dog, that means taking on full legal responsibility for its health and emotional wellbeing, and making a full commitment to making them a permanent member of your family.</p>
+        <p>If you click <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">here</a> you will see the details of the dogs we have available, or even better, come down to the shelter during opening hours, meet some of the characters, do some walking, and try some Jail Breaks to find your perfect match.</p>
+      </div>
+      <div class="intro-image">
+        <img src="ready_to_adopt.jpeg" alt="A CAPS dog ready to be adopted" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="section-tag orange">Ready to Get Started?</div>
+    <h2>Adoption Register</h2>
+    <p>Click the link below to fill in our online form and start the adoption process, or give our caretakers a call to chat through your options.</p>
+    <a href="#" class="btn-primary">Adoption Register Form ↗</a>
+    <p class="cta-secondary-text">Prefer to chat first? <a href="contact.html">Get in touch with our caretakers</a> to find out more.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="section-tag">Got Questions?</div>
+    <h2>Frequently Asked Questions</h2>
+    <p class="lead">See the FAQs below to find out more. Click a question to expand the answer.</p>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>I want to adopt a dog, what next?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">The next step is to fill in a registration form with your full details. It's quite a detailed form, including which dog you wish to adopt and questions about your home, family, and security situation — we ask this to make sure you're prepared and a great match for the dog.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What does adoption cost?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">CAPS charges a fee of $300, which covers desexing, chip updates, and documentation. Any costs after adoption are the responsibility of the new family.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Am I guaranteed to get the dog I want?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Approval depends on a number of factors, but of course we want to ensure the best match. We need to be sure of a good fit — for example, whether your fences are high enough, or whether the dog is suited to children, elderly family members, or other dogs and pets in the home. We may suggest a different dog if we think it would be a better fit.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if more than one family wants a dog?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">This can happen, especially with new or younger dogs. In this case, we give everyone interested a period of time to submit an application, and we select the home we think the dog is most likely to thrive in. This can sometimes be disappointing, but our priority is the dog's long-term safety and wellbeing.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I bring the dog back if it doesn't work out?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Adopting is a big step, and we strongly encourage you to try a Jail Break or some Fostering, and think about your future plans, before committing — being returned to the kennels or passed to another family can be very distressing for a dog.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I'm new to owning a dog, how will I know what to do?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Every dog is different, and there's a lot to learn about diet, exercise, and getting along with other dogs and people. Our team is here to help with training and advice, but the best way to get to know a dog is to spend time with them first through a <a href="jailbreak_foster.html">Jail Break or Fostering</a>.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong style="color:rgba(255,255,255,0.7)">Cape Animal Protection Shelter Inc. (CAPS)</strong></p>
+  <p>ABN 69 052 210 256 &bull; 20 Kerr Point Drive, Weipa QLD 4874</p>
+  <p style="color:rgba(255,255,255,0.3);font-size:0.8rem;margin-top:0.25rem;">capeanimalprotectionshelter.org.au is the website of Cape Animal Protection Shelter Inc.</p>
+  <p style="margin-top:0.5rem;">&copy; 2026 CAPS &bull; <a href="https://www.facebook.com/CAPS.for.dogs/" target="_blank">Facebook</a> &bull; <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">SavourLife</a></p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  document.addEventListener('click', function(e) {
+    var menu = document.getElementById('mobileMenu');
+    var hamburger = document.querySelector('.hamburger');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
+
+</body>
+</html>
+
