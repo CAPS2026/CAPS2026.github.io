@@ -180,14 +180,14 @@
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
-    aspect-ratio: 18 / 7;
+    aspect-ratio: 16 / 7;
   }
 
   .intro-img-full img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 25%;
+    object-position: center 88%;
     display: block;
   }
 
@@ -261,6 +261,24 @@
   .cta-secondary-text a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
   .cta-secondary-text a:hover { text-decoration: underline; }
 
+  .video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 476px;
+    margin: 2.5rem auto 0;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
   /* FAQ */
   .faq-section { background: var(--caps-white); }
   .faq-list { margin-top: 2.5rem; max-width: 800px; }
@@ -330,6 +348,11 @@
     .ways-grid { grid-template-columns: 1fr; }
   }
 
+  @media (max-width: 1100px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
+
   @media (max-width: 640px) {
     nav { padding: 0 1rem; }
     .nav-links { display: none; }
@@ -350,6 +373,9 @@
     <ul class="nav-links">
       <li><a href="mission.html">Mission &amp; Vision</a></li>
       <li><a href="our-team.html">Our Team</a></li>
+      <li><a href="volunteer.html" class="active">Volunteer</a></li>
+      <li><a href="jailbreak_foster.html">Home Care</a></li>
+      <li><a href="adopt.html">Adopt</a></li>
       <li><a href="index.html#donate">Donate</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Adopt a Dog</a></li>
@@ -363,6 +389,9 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="mission.html" onclick="closeMenu()">Mission &amp; Vision</a>
   <a href="our-team.html" onclick="closeMenu()">Our Team</a>
+  <a href="volunteer.html" onclick="closeMenu()">Volunteer</a>
+  <a href="jailbreak_foster.html" onclick="closeMenu()">Home Care</a>
+  <a href="adopt.html" onclick="closeMenu()">Adopt</a>
   <a href="index.html#donate" onclick="closeMenu()">Donate</a>
   <a href="contact.html" onclick="closeMenu()">Contact</a>
   <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">Adopt a Dog ↗</a>
@@ -406,6 +435,12 @@
         <p>This one can be done from home. Slow-cooking chicken and rice gives the dogs a delicious treat.</p>
       </div>
     </div>
+    <div class="video-embed">
+      <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F966936548836741%2F&show_text=false&width=476&t=0"
+        scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+    </div>
   </div>
 </section>
 
@@ -445,7 +480,7 @@
 
       <details class="faq-item">
         <summary>Can I take a dog home?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">Yes, you can, if you meet a few conditions. Check out our <a href="jailbreak_foster.html">Foster &amp; Jailbreak page</a> to find out more.</div>
+        <div class="faq-answer">Yes, you can, if you meet a few conditions. Check out our <a href="jailbreak_foster.html">Jail Break &amp; Fostering page</a> to find out more.</div>
       </details>
 
       <details class="faq-item">
