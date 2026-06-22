@@ -27,8 +27,8 @@
   .nav-logo img { height: 80px; width: auto; }
   .nav-brand { font-family: var(--font-heading); font-weight: 800; font-size: 1.6rem; color: var(--caps-blue); line-height: 1.2; }
   .nav-brand span { display: block; font-size: 0.95rem; font-weight: 600; color: var(--caps-gray); }
-  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-  .nav-links a { font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem; color: var(--caps-charcoal); text-decoration: none; transition: color 0.2s; }
+  .nav-links { display: flex; align-items: center; gap: 1.25rem; list-style: none; }
+  .nav-links a { font-family: var(--font-heading); white-space: nowrap; font-weight: 700; font-size: 0.9rem; color: var(--caps-charcoal); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover, .nav-links a.active { color: var(--caps-blue); }
   .nav-cta { background: var(--caps-orange) !important; color: var(--caps-white) !important; padding: 0.5rem 1.25rem; border-radius: 50px; }
   .nav-cta:hover { background: #d4891a !important; }
@@ -71,13 +71,16 @@
       <img src="CAPS_logo.jpg" alt="CAPS Logo">
       <div class="nav-brand">C.A.P.S <span>Cape Animal Protection Shelter Inc.</span></div>
     </a>
-    <ul class="nav-links">
-      <li><a href="mission.html">Mission &amp; Vision</a></li>
-      <li><a href="our-team.html">Our Team</a></li>
-      <li><a href="index.html#donate">Donate</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Adopt a Dog</a></li>
-    </ul>
+<ul class="nav-links">
+  <li><a href="mission.html">Mission &amp; Vision</a></li>
+  <li><a href="our-team.html">Our Team</a></li>
+  <li><a href="volunteer.html">Volunteer</a></li>
+  <li><a href="jailbreak_foster.html">Home Care</a></li>
+  <li><a href="adopt.html">Adopt</a></li>
+  <li><a href="index.html#donate">Donate</a></li>
+  <li><a href="contact.html" class="active">Contact</a></li>
+  <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Our Dogs</a></li>
+</ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
