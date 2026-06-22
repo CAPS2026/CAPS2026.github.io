@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jail Break &amp; Fostering – Cape Animal Protection Shelter Inc. (CAPS)</title>
-<meta name="description" content="Take a CAPS dog home for a Jail Break outing or longer-term fostering in Weipa, Cape York, QLD. Find out how it works and what to expect.">
+<title>Adoption – Cape Animal Protection Shelter Inc. (CAPS)</title>
+<meta name="description" content="Adopt a dog from Cape Animal Protection Shelter Inc. (CAPS) in Weipa, Cape York, QLD. Find out what's involved and how to get started.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -184,6 +184,10 @@
   }
 
   .intro-text { font-size: 1.1rem; color: var(--caps-gray); }
+  .intro-text p { margin-bottom: 1.25rem; }
+  .intro-text p:last-child { margin-bottom: 0; }
+  .intro-text a { color: var(--caps-blue); font-weight: 700; text-decoration: none; }
+  .intro-text a:hover { text-decoration: underline; }
 
   .intro-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; background: var(--caps-gray-light); }
 
@@ -194,52 +198,6 @@
     object-position: center 50%;
     display: block;
   }
-
-  /* OPTIONS */
-  #homecare { padding-bottom: 1.5rem; }
-  .options-section { background: var(--caps-gray-light); padding-top: 2rem; }
-
-  .options-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: stretch;
-    margin-top: 2.5rem;
-  }
-
-  .options-cards { display: flex; flex-direction: column; gap: 1.5rem; }
-
-  .options-image { border-radius: 16px; overflow: hidden; min-height: 0; max-height: 480px; }
-  .options-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 65%; display: block; }
-
-  .option-card {
-    background: var(--caps-cream);
-    border: 1px solid var(--caps-border);
-    border-radius: 16px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .option-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: var(--caps-blue);
-  }
-
-  .option-card:nth-child(2)::before { background: var(--caps-orange); }
-
-  .option-card h3 {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: var(--caps-blue-dark);
-    margin-bottom: 0.6rem;
-  }
-
-  .option-card p { font-size: 1rem; color: var(--caps-gray); line-height: 1.7; }
 
   /* CTA */
   .cta-section { background: var(--caps-orange-light); text-align: center; }
@@ -259,8 +217,6 @@
   }
 
   .btn-primary:hover { background: #d4891a; transform: translateY(-2px); }
-
-  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
   .cta-secondary-text {
     margin-top: 1.5rem;
@@ -339,8 +295,6 @@
   @media (max-width: 900px) {
     .intro-layout { grid-template-columns: 1fr; }
     .intro-image { max-height: 300px; }
-    .options-layout { grid-template-columns: 1fr; }
-    .options-image { max-height: 320px; }
   }
 
   @media (max-width: 640px) {
@@ -364,8 +318,8 @@
       <li><a href="mission.html">Mission &amp; Vision</a></li>
       <li><a href="our-team.html">Our Team</a></li>
       <li><a href="volunteer.html">Volunteer</a></li>
-      <li><a href="jailbreak_foster.html" class="active">Home Care</a></li>
-      <li><a href="adopt.html">Adopt</a></li>
+      <li><a href="jailbreak_foster.html">Home Care</a></li>
+      <li><a href="adopt.html" class="active">Adopt</a></li>
       <li><a href="index.html#donate">Donate</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Our Dogs</a></li>
@@ -388,40 +342,17 @@
 </div>
 
 <!-- INTRO -->
-<section id="homecare">
+<section id="adoption">
   <div class="section-inner">
-    <div class="section-tag">Home Care</div>
-    <h2>Jail Break &amp; Fostering</h2>
+    <div class="section-tag">Forever Homes</div>
+    <h2>Adoption</h2>
     <div class="intro-layout">
       <div class="intro-text">
-        <p>There is nothing our dogs love more than an adventure — getting out of the shelter to spend time with a family in a different environment for some peace and quiet, an exciting trip, or as a trial for possible adoption.</p>
+        <p>Adoption of our dogs is what we are aiming for. We miss them very much, but are thrilled to see them heading to their forever home and new family. When you adopt a dog, that means taking on full legal responsibility for its health and emotional wellbeing, and making a full commitment to making them a permanent member of your family.</p>
+        <p>If you click <a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank">here</a> you will see the details of the dogs we have available, or even better, come down to the shelter during opening hours, meet some of the characters, do some walking, and try some Jail Breaks to find your perfect match.</p>
       </div>
       <div class="intro-image">
-        <img src="ready_for_foster.jpeg" alt="A CAPS dog out on a Jail Break or fostering trip" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OPTIONS -->
-<section class="options-section">
-  <div class="section-inner">
-    <div class="section-tag orange">Two Ways to Help</div>
-    <h2>Jail Break or Fostering?</h2>
-    <p class="lead">Both options give our dogs a much-needed break from the shelter — the right one for you depends on how much time you can offer.</p>
-    <div class="options-layout">
-      <div class="options-cards">
-        <div class="option-card">
-          <h3>Jail Break</h3>
-          <p>Taking a dog home, away from the shelter, for a few hours, a weekend, or perhaps a week. They'll be with you most of the time for walks, exercise, and games.</p>
-        </div>
-        <div class="option-card">
-          <h3>Fostering</h3>
-          <p>A longer-term arrangement, ideally for several weeks, as a trial run for adoption. The dog takes its first steps to being part of a family, and might not be supervised all the time.</p>
-        </div>
-      </div>
-      <div class="options-image">
-        <img src="ready_for_jail_break.jpeg" alt="A CAPS dog ready and waiting for a Jail Break" loading="lazy">
+        <img src="ready_to_adopt.jpeg" alt="A CAPS dog ready to be adopted" loading="lazy">
       </div>
     </div>
   </div>
@@ -431,12 +362,9 @@
 <section class="cta-section">
   <div class="section-inner">
     <div class="section-tag orange">Ready to Get Started?</div>
-    <h2>Register for Jail Break or Fostering</h2>
-    <p>Click the link below to fill in the relevant online form and register, or give our caretakers a call to chat through the right option for you.</p>
-    <div class="cta-buttons">
-      <a href="#" class="btn-primary">Register for Jail Break ↗</a>
-      <a href="#" class="btn-primary">Register for Fostering ↗</a>
-    </div>
+    <h2>Adoption Register</h2>
+    <p>Click the link below to fill in our online form and start the adoption process, or give our caretakers a call to chat through your options.</p>
+    <a href="#" class="btn-primary">Adoption Register Form ↗</a>
     <p class="cta-secondary-text">Prefer to chat first? <a href="contact.html">Get in touch with our caretakers</a> to find out more.</p>
   </div>
 </section>
@@ -450,38 +378,33 @@
     <div class="faq-list">
 
       <details class="faq-item">
-        <summary>How do I get started with Jail Break or Fostering?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">The first step is to complete the Jail Break or Foster registration form above, whichever applies to you. We'll then assess your suitability based on things like transport, fences at home, and whether you have other dogs or children, which helps us match you with the right dog.</div>
+        <summary>I want to adopt a dog, what next?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">The next step is to fill in a registration form with your full details. It's quite a detailed form, including which dog you wish to adopt and questions about your home, family, and security situation — we ask this to make sure you're prepared and a great match for the dog.</div>
       </details>
 
       <details class="faq-item">
-        <summary>I have kids at home, does that mean I can't Jail Break or foster?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">No, it just means some dogs are better suited to living with children than others.</div>
+        <summary>What does adoption cost?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">CAPS charges a fee of $300, which covers desexing, chip updates, and documentation. Any costs after adoption are the responsibility of the new family.</div>
       </details>
 
       <details class="faq-item">
-        <summary>I have dogs at home, does that mean I can't Jail Break or foster?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">No, it just means some dogs are better suited to living with other dogs and pets than others.</div>
+        <summary>Am I guaranteed to get the dog I want?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Approval depends on a number of factors, but of course we want to ensure the best match. We need to be sure of a good fit — for example, whether your fences are high enough, or whether the dog is suited to children, elderly family members, or other dogs and pets in the home. We may suggest a different dog if we think it would be a better fit.</div>
       </details>
 
       <details class="faq-item">
-        <summary>I have low fences, does this mean I can't bring a dog home?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">Possibly. We need to be sure a dog can't escape. This is less of a concern on a supervised Jail Break, but for fostering, secure fencing is essential.</div>
+        <summary>What happens if more than one family wants a dog?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">This can happen, especially with new or younger dogs. In this case, we give everyone interested a period of time to submit an application, and we select the home we think the dog is most likely to thrive in. This can sometimes be disappointing, but our priority is the dog's long-term safety and wellbeing.</div>
       </details>
 
       <details class="faq-item">
-        <summary>When can I collect and return the dogs?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">Pickup and drop-off is limited to our normal opening hours, when a caretaker is on duty.</div>
+        <summary>Can I bring the dog back if it doesn't work out?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Adopting is a big step, and we strongly encourage you to try a Jail Break or some Fostering, and think about your future plans, before committing — being returned to the kennels or passed to another family can be very distressing for a dog.</div>
       </details>
 
       <details class="faq-item">
-        <summary>What's the difference between Fostering and adoption?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">When you adopt a dog, it's yours forever — you become the registered legal owner and are legally responsible for it. A foster dog still belongs to CAPS and can be returned at any time, at your request or at ours.</div>
-      </details>
-
-      <details class="faq-item">
-        <summary>What happens if the dog gets sick while on Foster care?<span class="faq-toggle"></span></summary>
-        <div class="faq-answer">If your foster dog becomes unwell, we'll arrange to visit or collect them and, if needed, take them to see the vet — at no cost to you.</div>
+        <summary>I'm new to owning a dog, how will I know what to do?<span class="faq-toggle"></span></summary>
+        <div class="faq-answer">Every dog is different, and there's a lot to learn about diet, exercise, and getting along with other dogs and people. Our team is here to help with training and advice, but the best way to get to know a dog is to spend time with them first through a <a href="jailbreak_foster.html">Jail Break or Fostering</a>.</div>
       </details>
 
     </div>
