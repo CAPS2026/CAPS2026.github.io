@@ -73,16 +73,16 @@
 
   .nav-brand span { display: block; font-size: 0.95rem; font-weight: 600; color: var(--caps-gray); }
 
- .nav-links { display: flex; align-items: center; gap: 1.25rem; list-style: none; }
+  .nav-links { display: flex; align-items: center; gap: 1.25rem; list-style: none; }
 
   .nav-links a {
     font-family: var(--font-heading);
     font-weight: 700;
-    white-space: nowrap;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--caps-charcoal);
     text-decoration: none;
     transition: color 0.2s;
+    white-space: nowrap;
   }
 
   .nav-links a:hover { color: var(--caps-blue); }
@@ -172,9 +172,9 @@
     margin-bottom: 1rem;
   }
 
-  .lead { font-size: 1.05rem; color: var(--caps-gray); max-width: 680px; margin-bottom: 3rem; }
+  .lead { font-size: 1.05rem; color: var(--caps-gray); max-width: 680px; margin-bottom: 2rem; }
 
-  .people-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .people-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
 
   .person-card {
     background: var(--caps-cream);
@@ -214,7 +214,13 @@
 
   .person-card.more .role { color: var(--caps-gray); font-size: 0.9rem; text-transform: none; letter-spacing: 0; }
 
-  .caretakers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+  .caretakers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+    max-width: 800px;
+  }
 
   .caretaker-card {
     background: var(--caps-white);
@@ -244,7 +250,7 @@
 
   @media (max-width: 900px) {
     .people-grid { grid-template-columns: 1fr 1fr; }
-    .caretakers-grid { grid-template-columns: repeat(2, 1fr); }
+    .caretakers-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }
   }
 
   @media (max-width: 640px) {
@@ -269,16 +275,16 @@
       <img src="CAPS_logo.jpg" alt="CAPS Logo">
       <div class="nav-brand">C.A.P.S <span>Cape Animal Protection Shelter Inc.</span></div>
     </a>
-<ul class="nav-links">
-  <li><a href="mission.html">Mission &amp; Vision</a></li>
-  <li><a href="our-team.html" class="active">Our Team</a></li>
-  <li><a href="volunteer.html">Volunteer</a></li>
-  <li><a href="jailbreak_foster.html">Home Care</a></li>
-  <li><a href="adopt.html">Adopt</a></li>
-  <li><a href="index.html#donate">Donate</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Our Dogs</a></li>
-</ul>
+    <ul class="nav-links">
+      <li><a href="mission.html">Mission &amp; Vision</a></li>
+      <li><a href="our-team.html" class="active">Our Team</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="jailbreak_foster.html">Home Care</a></li>
+      <li><a href="adopt.html">Adopt</a></li>
+      <li><a href="index.html#donate">Donate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.savour-life.com.au/savourlife-pet-adoptions/rescue-groups/6612/Cape-Animal-Protection-Shelter-Inc---CAPS" target="_blank" class="nav-cta">Our Dogs</a></li>
+    </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -307,7 +313,9 @@
         <div class="person-photo" style="background:none;border-color:var(--caps-blue);">
           <img src="shayna_reeves.jpeg" alt="Shayna Reeves" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
         </div>
-        <div class="role">President</div><h4>Shayna Reeves</h4>
+        <div class="role">President</div>
+        <div class="role">Foster &amp; Adoptions Coordinator</div>
+        <h4>Shayna Reeves</h4>
       </div>
       <div class="person-card">
         <div class="person-photo" style="background:none;border-color:var(--caps-blue);">
@@ -329,10 +337,6 @@
         <div class="person-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
         <div class="role">Payroll</div><h4>Sonya Fletcher</h4>
       </div>
-      <div class="person-card">
-        <div class="person-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
-        <div class="role">Foster &amp; Adoptions Coordinator</div><h4>Name to follow</h4>
-      </div>
       <div class="person-card more">
         <div class="person-photo" style="border-style:dashed;border-color:var(--caps-border);background:transparent;">
           <svg viewBox="0 0 24 24" style="fill:var(--caps-gray);opacity:0.35;"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
@@ -342,7 +346,7 @@
     </div>
 
     <!-- CARETAKERS -->
-    <div style="margin-top:4rem;">
+    <div style="margin-top:3rem;">
       <div class="section-tag orange">The Hands-On Team</div>
       <h2>Our Dedicated Caretakers</h2>
       <p class="lead">The people who show up every single day to make sure every animal is fed, loved, and cared for — rain, heatwave, or anything in between.</p>
@@ -350,10 +354,6 @@
         <div class="caretaker-card">
           <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
           <h4>Wayne</h4><div class="role">Caretaker</div>
-        </div>
-        <div class="caretaker-card">
-          <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
-          <h4>Elias</h4><div class="role">Caretaker</div>
         </div>
         <div class="caretaker-card">
           <div class="caretaker-photo"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
@@ -393,4 +393,3 @@
 
 </body>
 </html>
-
